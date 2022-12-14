@@ -1,30 +1,16 @@
-// const express = require('express');
-// const path = require('path');
-// const app = express();
+const express = require('express');
+const path = require('path');
+const app = express();
 
-// // Static files = not handled by the server
+// Static files = not handled by the server
 
-// // Express. static is middleware, makes it so that any request has access to the given file
-// app.use(express.static('public'));
-// //app.use(express.static(`$(__dirname}/public ')) //gets directory when you don't know what it's called
+// Express. static is middleware, makes it so that any request has access to the given file
+app.use(express.static('public'));
+//app.use(express.static(`$(__dirname}/public ')) //gets directory when you don't know what it's called
 
-// //Gets the home page
-// app.get('/', (req, res) => {
-//     res.sendFile(path.join(__dirname, '../public/index.html'));
-// })
-
-// app.listen(4000, () => console.log(`Running on 4000!`));
-
-
-const express = require('express')
-const path = require('path')
-const app = express()
-
-app.use(express.static('public'))
-//app.use(express.static(`${__dirname}/public))
-
-app.get('/',(req,res) => {
-    res.sendFile(path.join(__dirname,'../public/index.html'))
+//Gets the home page
+app.get('/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../public/index.html'));
 })
 
-app.listen(4000, () => console.log(`gliding on 4000`))
+app.listen(4000, () => console.log(`Running on 4000!`));
